@@ -100,7 +100,6 @@ class CVFR_model(tf.keras.Model):
         self.xp = (self.beta + np.sqrt(self.beta**2 - 4* self.gamma))/2
         self.sigma = sigma
         self.n_classes = attractors.shape[1]
-        self.type_of_damping = type_of_damping
 
         if eigenvalues is None:
             self.eigenvalues = self.add_weight(
